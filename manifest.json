@@ -1,16 +1,37 @@
 {
-  "manifest_version": 2,
+    "manifest_version": 2,
 
-  "name": "Chrome Calculator",
-  "description": "This chrome extension allows you to easily add numbers on a page",
-  "version": "1.0",
+    "name": "Chrome Calculator",
+    "description": "Allows you to easily add numbers on a webpage.",
+    "version": "1.0",
 
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "calc.html"
-  },
-  "permissions": [
-    "activeTab",
-    "https://ajax.googleapis.com/"
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "activeTab",
+      "https://ajax.googleapis.com/",
+      "tabs",
+      "<all_urls>"
+    ],
+    "background":
+    {
+        "scripts": ["thirdParty/jquery.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+    {
+      "matches": [ "http://*/*", "https://*/*"],
+      "css": ["calculator/calculator.css"],
+      "js": ["thirdParty/jquery.js", "calculator/calculator.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "images/*.png",
+    "https://s3-us-west-1.amazonaws.com/com.zirtual.static/website_v2/fonts/gothamrounded-book.woff",
+    "https://s3-us-west-1.amazonaws.com/com.zirtual.static/website_v2/fonts/gothamrounded-light.woff",
+    "fonts/*.woff"
   ]
 }

@@ -1,0 +1,30 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 30, 2015, 2:07:54 PM
+    Author     : mike_newell
+*/
+
+.totalOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ee2ec3;
+    color: white;
+    width: 150px;
+    padding: 50px;
+    text-align: center;
+    z-index: 9999999;
+}
+
+.totalTotal {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+
+

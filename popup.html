@@ -5,33 +5,48 @@
  value "popup.html".
  -->
 <html>
-  <head>
-    <title>Getting Started Extension's Popup</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
-    </style>
+    <head>
+        <title>Zirtual Training</title>
+        <style>
+            
+            @font-face {
+                font-family: "Gotham Rounded Book";
+                src: url("chrome-extension://fglehdlfiphnijaigbealnmmpmmagnlf/fonts/gothamrounded-book.woff") format('woff');
+            }
 
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="popup.js"></script>
-  </head>
-  <body>
-    <div id="status"></div>
-    <img id="image-result" hidden>
-  </body>
+            @font-face {
+                font-family: "Gotham Rounded Light";
+                src: url("chrome-extension://fglehdlfiphnijaigbealnmmpmmagnlf/fonts/gothamrounded-light.woff") format('woff');
+                /*src: url("https://s3-us-west-1.amazonaws.com/com.zirtual.static/website_v2/fonts/gothamrounded-light.woff") format('woff');*/
+            }
+
+            body {
+                background: #fff;
+                color: #4f5962;
+                font-family: 'Gotham Rounded Light','Helvetica Neue',Helvetica,Arial,sans-serif;
+                font-size: 16px;
+                line-height: 25.6px;
+                font-weight: 400;
+            }
+              
+        </style>
+
+        <!--
+          - JavaScript and HTML must be in separate files: see our Content Security
+          - Policy documentation[1] for details and explanation.
+          -
+          - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+         -->
+        <script src="popup.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Chrome Calculator</h1>
+            <p>Easily add things together on a page.</p>
+            <button id="plus">+</button>
+            <button id="minus">-</button>
+            <button id="reset">CC</button>
+        </div>
+    </body>
 </html>
 

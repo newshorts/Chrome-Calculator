@@ -1,0 +1,111 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 28, 2015, 9:52:34 PM
+    Author     : mike_newell
+*/
+
+@font-face {
+    font-family: "Gotham Rounded Book";
+    src: url("chrome-extension://ibakkikbmgpbhnolpjaphlonnnfbpeeh/fonts/gothamrounded-book.woff") format('woff');
+}
+
+@font-face {
+    font-family: "Gotham Rounded Light";
+    src: url("chrome-extension://ibakkikbmgpbhnolpjaphlonnnfbpeeh/fonts/gothamrounded-light.woff") format('woff');
+    /*src: url("https://s3-us-west-1.amazonaws.com/com.zirtual.static/website_v2/fonts/gothamrounded-light.woff") format('woff');*/
+}
+
+body {
+    background-color: black;
+    font-family: "Gotham Rounded Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+
+.blackout {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background-color: black;
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+    
+    
+    width: 200px;
+    height: 200px;
+    
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.message {
+    width: 600px;
+    font-family: "Gotham Rounded Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1;
+    font-size: 60px;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin-left: -300px;
+    color: white;
+    border: solid 3px #ffffff;
+    padding: 20px 20px 13px;
+    text-align: left;
+}
+
+.message img {
+    float: right;
+    width: 120px;
+    margin: 15px;
+}
+
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
